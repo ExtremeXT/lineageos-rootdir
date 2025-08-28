@@ -126,4 +126,19 @@ repopickchain 433600 # liblog: Always report as debuggable when building userdeb
 # vendor/qcom/opensource/audio-hal/st-hal-ar
 repopickchain 437007 # st-hal-ar: Add dependency on libarpal_headers
 
+# Samsung / Exynos / 9830 specific fixes
+
+# hardware/samsung
+repopick 442939 # livedisplay: Migrate to AIDL
+repopickchain 445841 # touch: Add Single Tap gesture support
+repopick 447529 # touch: Add HighTouchPollingRate interface
+
+# hardware/samsung_slsi-linaro/exynos
+repopick 399491 # audiohal_comv1: return BT SCO device when an actual BT SCO device is used
+repopick 399492 # exynos: audiohal_comv1: Always allow to reconfigure stream if voice  recognition is active
+repopick 399493 # exynos: audiohal_comv1: Ensure AUDIO_INPUT_FLAG_FAST is set when using low latency capture samplerate during calls
+
+# hardware/samsung_slsi-linaro/exynos
+repopick 384848 # WIP: libhwc2.1: invalidate last frame before changing display mode
+
 wait
