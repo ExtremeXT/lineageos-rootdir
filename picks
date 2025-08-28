@@ -137,6 +137,7 @@ repopick 399492 # exynos: audiohal_comv1: Always allow to reconfigure stream if 
 repopick 399493 # exynos: audiohal_comv1: Ensure AUDIO_INPUT_FLAG_FAST is set when using low latency capture samplerate during calls
 
 # hardware/samsung_slsi-linaro/exynos
+repopick 419347 # libhwc2.1: fix compilation for exynos2100
 repopick 384848 # WIP: libhwc2.1: invalidate last frame before changing display mode
 
 wait
