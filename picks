@@ -130,8 +130,6 @@ repopickchain 437007 # st-hal-ar: Add dependency on libarpal_headers
 
 # hardware/samsung
 repopick 442939 # livedisplay: Migrate to AIDL
-repopickchain 445841 # touch: Add Single Tap gesture support
-repopickchain 447530 # touch: Add HighTouchPollingRate interface
 
 # hardware/samsung_slsi-linaro/exynos
 repopick 399491 # audiohal_comv1: return BT SCO device when an actual BT SCO device is used
