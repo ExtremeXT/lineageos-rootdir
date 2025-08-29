@@ -127,6 +127,5 @@ repopick 447582 # cpboot_v3: Use smaller payload segment size for all sipc devic
 
 # hardware/samsung_slsi-linaro/graphics
 repopick 419347 # libhwc2.1: fix compilation for exynos2100
-repopick 447564 # libhwc2.1: invalidate the last frame before changing display mode
 
 wait
