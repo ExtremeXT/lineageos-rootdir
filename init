@@ -1,3 +1,3 @@
 #!/bin/bash
 
-repo init --git-lfs --no-clone-bundle -u ssh://git@github.com/LineageOS/android.git -b refs/changes/42/436442/17
+repo init --git-lfs --no-clone-bundle -u ssh://git@github.com/LineageOS/android.git -b refs/changes/42/436442/21
