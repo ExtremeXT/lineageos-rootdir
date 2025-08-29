@@ -131,4 +131,7 @@ repopick 399493 # exynos: audiohal_comv1: Ensure AUDIO_INPUT_FLAG_FAST is set wh
 repopick 419347 # libhwc2.1: fix compilation for exynos2100
 repopick 447564 # libhwc2.1: invalidate the last frame before changing display mode
 
+# hardware/samsung_slsi-linaro/exynos
+repopick 447582 # cpboot_v3: Use smaller payload segment size for all sipc devices
+
 wait
