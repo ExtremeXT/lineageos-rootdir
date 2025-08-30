@@ -120,12 +120,10 @@ repopickchain 437007 # st-hal-ar: Add dependency on libarpal_headers
 repopick 442939 # livedisplay: Migrate to AIDL
 
 # hardware/samsung_slsi-linaro/exynos
-repopick 447593 # exynos: audiohal_comv1: return BT SCO device when an actual BT SCO device is used
-repopick 447594 # exynos: audiohal_comv1: Always allow to reconfigure stream if voice  recognition is active
-repopick 447595 # exynos: audiohal_comv1: Ensure AUDIO_INPUT_FLAG_FAST is set when using low latency capture samplerate during calls
 repopick 447582 # cpboot_v3: Use smaller payload segment size for all sipc devices
 
 # hardware/samsung_slsi-linaro/graphics
 repopick 419347 # libhwc2.1: fix compilation for exynos2100
 
 wait
+
