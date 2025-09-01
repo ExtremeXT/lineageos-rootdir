@@ -114,7 +114,7 @@ repopickchain 437007 # st-hal-ar: Add dependency on libarpal_headers
 # Samsung / Exynos / 9830 specific fixes
 
 # hardware/samsung
-repopick 442939 # livedisplay: Migrate to AIDL
+repopickchain 442939 # livedisplay: Migrate to AIDL
 
 wait
 
