@@ -66,6 +66,8 @@ repopick 460760 # fixup! PowerManager: Add proximity check on wake
 repopick 460761 # hw key rebind hax
 repopick 460762 # fixup! SystemUI: Add heads up tile
 repopick 460763 # fixup! Configurable 0, 90, 180 and 270 degree rotation
+repopick 460772 # fixup! Configurable 0, 90, 180 and 270 degree rotation
+repopick 460773 # global actions screenshot hax
 repopick 460768 # fixup! SystemUI: Fix constraints for keyguard slice view
 repopick 460806 # fixup! SystemUI: Clock position customization
 
