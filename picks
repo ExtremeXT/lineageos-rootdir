@@ -9,7 +9,7 @@ function repopick() {
         echo -n "${@: -1} - " ; ssh lineage-gerrit gerrit query ${@: -1} --format=JSON | jq --slurp -r '.[0].status'
     else
         ${ANDROID_BUILD_TOP}/vendor/lineage/build/tools/repopick.py \
-            -g "ssh://$GERRIT_USERNAME@review.lineageos.org:29418" $@ &
+            -g "ssh://$GERRIT_USERNAME@review.lineageos.org:29418" $@
     fi
 }
 
@@ -57,7 +57,6 @@ repopick 460736 # Revert "Remove libkeyutils"
 repopick 460738 # DNM pixel kernel hax
 repopick 460742 # config: Add libzstd.so to artifact path requirement allowlist
 repopick 460743 # config: Build LocalContactsBackup
-repopick 460766 # config: Add adbd_flags_c_lib.so to artifact path requirement allowlist
 
 # frameworks/base
 repopickchain 460547 # Automatic translation import
@@ -78,9 +77,12 @@ repopick 460770 # fixup! RecentsView: Unconditionally hide split option for Go-e
 
 # packages/apps/Settings
 repopickchain 460693 # Settings: Switch back to udfps_enroll_enrolling_non_scroll layout
+repopick 460800 # fixup! Settings: Network setup UI changes for SUW
+repopick 460801 # Settings: Fix NPE in ImeiInfoPreferenceController
+repopick 460802 # DNM Force disable StatusBarChipsModernization
 
 # packages/modules/adb
-#repopick 460767 # fixup! Add ADB root service changes
+repopick 460778 # adbd: Fix adbd_flags_c_lib dependency
 
 # packages/apps/Aperture
 repopick 460757 # Aperture: Use colorError from appcompat
@@ -100,11 +102,6 @@ fi
 # hardware/samsung_slsi-linaro/exynos
 if [ -d "hardware/samsung_slsi-linaro/exynos" ]; then
     repopick 460771 # DNM kill unittests
-fi
-
-# device/google/gs-common
-if [ -d "device/google/gs-common" ]; then
-    repopick 460755 # DNM fix neverallow
 fi
 
 # vendor/qcom/opensource/display
