@@ -42,79 +42,72 @@ function rc() {
 # repopick 2137 # hello
 #
 
-# build/make
-# repopick -f 332045 # Don't enforce vintf kernel requirements when building without LTO
+# scripts
+repopick 460695 # device-deps-regenerator: Add lineage-23.1 branch
 
-# android
-repopickchain 436442 # lineage: Temporarily track lineage-22.2 for certain repos
+# BP3A merges
+repopick -p -t BP3A
 
-# device/google/contexthub
-repopick 433315 # contexthub: sensorhal: allow building it again with Android.bp
+sleep 1
 
-# device/qcom/sepolicy_vndr/sm8750
-repopickchain 437756 # sepolicy: Remove sysfs_udc label
+# system/core
+repopick 460736 # Revert "Remove libkeyutils"
 
-# external/e2fsprogs
-repopickchain 433337 # e2fsck: Loosen fscrypt_policy struct size check
+# vendor/lineage
+repopick 460738 # DNM pixel kernel hax
+repopick 460742 # config: Add libzstd.so to artifact path requirement allowlist
+repopick 460743 # config: Build LocalContactsBackup
+repopick 460766 # config: Add adbd_flags_c_lib.so to artifact path requirement allowlist
 
 # frameworks/base
-repopickchain 437656 # fixup! Firewall: Transport-based toggle support (1/3)
+repopickchain 460547 # Automatic translation import
+repopick 460754 # Revert "Stop domain verification delegated from UIDs blocked by network policy"
+repopick 460759 # Revert "Implement click to take partial screenshot [1/3]"
+repopick 460760 # fixup! PowerManager: Add proximity check on wake
+repopick 460761 # hw key rebind hax
+repopick 460762 # fixup! SystemUI: Add heads up tile
+repopick 460763 # fixup! Configurable 0, 90, 180 and 270 degree rotation
+repopick 460768 # fixup! SystemUI: Fix constraints for keyguard slice view
 
-# frameworks/opt/telephony
-repopickchain 433394 # RIL: Fix manual network selection with old modem
-
-# hardware/libhardware
-repopickchain 433441 # libhardware: Add new display types.
-
-# hardware/qcom-caf/sm8650/display
-repopickchain 437787 # gralloc: avoid calling property_get() on every buffer allocation
-
-# hardware/qcom-caf/sm8650/audio/agm
-repopickchain 437334 # agm: disable mem logger support
-
-# hardware/qcom-caf/sm8750/audio/pal
-repopickchain 437868 # vui_interface: Address more compilation errors
-
-# hardware/qcom-caf/sm8750/audio/primary-hal
-repopickchain 437495 # libbaterylistener: Remove unused HIDL health dependencies
-
-# hardware/qcom-caf/sm8750/dataipa
-repopickchain 437553 # dataipa: Disable all the debugging
-
-# hardware/qcom-caf/sm8750/display/hal
-repopickchain 437788 # gralloc: avoid calling property_get() on every buffer allocation
-
-# kernel/configs
-repopickchain 433459 # p/android-4.4: Bump min LTS version
-
-# kernek/oneplus/sm8150
-repopick -p 439270 # Merge commit 'refs/changes/46/437246/6' of https://github.com/LineageOS/android_kernel_qcom_sm8150 into HEAD
+# packages/apps/Launcher3
+repopickchain 460607 # Launcher3: Add resource to enable rotation by default
+repopick 460764 # fixup! Launcher3: Implement gesture hint toggle
+repopick 460765 # fixup! Launcher3: Implement taskbar toggle
+repopick 460769 # fixup! Launcher3: Implement gesture hint toggle
+repopick 460770 # fixup! RecentsView: Unconditionally hide split option for Go-enabled targets  
 
 # packages/apps/Settings
-repopickchain 437655 # fixup! Fix background data clobbering other policies
+repopickchain 460693 # Settings: Switch back to udfps_enroll_enrolling_non_scroll layout
 
-# packages/apps/SettingsIntelligence
-repopickchain 433482 # Style search bar to match new Settings UI
+# packages/modules/adb
+#repopick 460767 # fixup! Add ADB root service changes
 
-# packages/modules/Connectivity
-repopickchain 433518 # netd: Remove <5.4 kernel restrictions
+# packages/apps/Aperture
+repopick 460757 # Aperture: Use colorError from appcompat
 
-# system/bpf
-repopickchain 433560 # bpfloader: prog names are only valid on 4.15+
+# packages/apps/Recorder
+repopick 460756 # Recorder: colorAccent -> colorSecondary
 
-# system/libhidl
-repopick 433596 # libhidlmemory: mark as recovery_available
-
-# system/logging
-repopickchain 433600 # liblog: Always report as debuggable when building userdebug/eng
-
-# vendor/qcom/opensource/audio-hal/st-hal-ar
-repopickchain 437007 # st-hal-ar: Add dependency on libarpal_headers
-
-# Samsung / Exynos / 9830 specific fixes
+# packages/apps/Seedvault
+repopick 460744 # Don't add LocalContactsBackup to required modules
+repopick 460758 # Seedvault: Use colorError from appcompat
 
 # hardware/samsung
-repopickchain 442939 # livedisplay: Migrate to AIDL
+if [ -d "hardware/samsung" ]; then
+    repopick 460734 # Revert "samsung: hidl: add vibrator HAL for SEC Haptic Engine"
+fi
+
+# hardware/samsung_slsi-linaro/exynos
+if [ -d "hardware/samsung_slsi-linaro/exynos" ]; then
+    repopick 460771 # DNM kill unittests
+fi
+
+# device/google/gs-common
+if [ -d "device/google/gs-common" ]; then
+    repopick 460755 # DNM fix neverallow
+fi
+
+# vendor/qcom/opensource/display
+repopick 460735 # composer3: Depend on android.hardware.graphics.common-V7
 
 wait
-
