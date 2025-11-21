@@ -67,6 +67,7 @@ repopick 460761 # hw key rebind hax
 repopick 460762 # fixup! SystemUI: Add heads up tile
 repopick 460763 # fixup! Configurable 0, 90, 180 and 270 degree rotation
 repopick 460768 # fixup! SystemUI: Fix constraints for keyguard slice view
+repopick 460806 # fixup! SystemUI: Clock position customization
 
 # packages/apps/Launcher3
 repopickchain 460607 # Launcher3: Add resource to enable rotation by default
@@ -79,7 +80,6 @@ repopick 460770 # fixup! RecentsView: Unconditionally hide split option for Go-e
 repopickchain 460693 # Settings: Switch back to udfps_enroll_enrolling_non_scroll layout
 repopick 460800 # fixup! Settings: Network setup UI changes for SUW
 repopick 460801 # Settings: Fix NPE in ImeiInfoPreferenceController
-repopick 460802 # DNM Force disable StatusBarChipsModernization
 
 # packages/modules/adb
 repopick 460778 # adbd: Fix adbd_flags_c_lib dependency
