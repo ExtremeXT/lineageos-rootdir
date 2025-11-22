@@ -66,11 +66,17 @@ repopick 460760 # fixup! PowerManager: Add proximity check on wake
 repopick 460761 # hw key rebind hax
 repopick 460762 # fixup! SystemUI: Add heads up tile
 repopick 460763 # fixup! Configurable 0, 90, 180 and 270 degree rotation
+repopick 460768 # fixup! SystemUI: Fix constraints for keyguard slice view
 repopick 460772 # fixup! Configurable 0, 90, 180 and 270 degree rotation
 repopick 460773 # global actions screenshot hax
-repopick 460768 # fixup! SystemUI: Fix constraints for keyguard slice view
+repopick 460774 # fixup! SystemUI: Make the volume dialog expandable
+repopick 460775 # fixup! SystemUIProxy: Add injectLongPress()
+repopick 460776 # fixup! SystemUIProxy: Add injectPress()
+repopick 460777 # fixup! SystemUIProxy: Add injectLongPress()
 repopick 460806 # fixup! SystemUI: Clock position customization
 repopick 460877 # SystemUI: Fix NPE in KeyguardPreviewSmartspaceViewBinder
+repopick 460928 # fixup! SystemUIProxy: Add injectLongPress()
+repopick 460929 # fixup! SystemUIProxy: Add injectPress()
 
 # packages/apps/Launcher3
 repopickchain 460607 # Launcher3: Add resource to enable rotation by default
