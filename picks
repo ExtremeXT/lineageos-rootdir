@@ -54,7 +54,6 @@ sleep 1
 repopick 460736 # Revert "Remove libkeyutils"
 
 # vendor/lineage
-repopick 460738 # DNM pixel kernel hax
 repopick 460742 # config: Add libzstd.so to artifact path requirement allowlist
 repopick -f 460881 # config: Enable background blur by default
 
