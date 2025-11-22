@@ -56,7 +56,6 @@ repopick 460736 # Revert "Remove libkeyutils"
 # vendor/lineage
 repopick 460738 # DNM pixel kernel hax
 repopick 460742 # config: Add libzstd.so to artifact path requirement allowlist
-repopick 460743 # config: Build LocalContactsBackup
 
 # frameworks/base
 repopickchain 460547 # Automatic translation import
@@ -93,7 +92,7 @@ repopick 460757 # Aperture: Use colorError from appcompat
 repopick 460756 # Recorder: colorAccent -> colorSecondary
 
 # packages/apps/Seedvault
-repopick 460744 # Don't add LocalContactsBackup to required modules
+repopick 460744 # Move LocalContactsBackup to system_ext
 repopick 460758 # Seedvault: Use colorError from appcompat
 
 # hardware/samsung
