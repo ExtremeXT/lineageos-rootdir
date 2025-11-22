@@ -56,6 +56,7 @@ repopick 460736 # Revert "Remove libkeyutils"
 # vendor/lineage
 repopick 460738 # DNM pixel kernel hax
 repopick 460742 # config: Add libzstd.so to artifact path requirement allowlist
+repopick 460881 # config: Enable background blur by default
 
 # frameworks/base
 repopickchain 460547 # Automatic translation import
@@ -69,6 +70,7 @@ repopick 460772 # fixup! Configurable 0, 90, 180 and 270 degree rotation
 repopick 460773 # global actions screenshot hax
 repopick 460768 # fixup! SystemUI: Fix constraints for keyguard slice view
 repopick 460806 # fixup! SystemUI: Clock position customization
+repopick 460877 # SystemUI: Fix NPE in KeyguardPreviewSmartspaceViewBinder
 
 # packages/apps/Launcher3
 repopickchain 460607 # Launcher3: Add resource to enable rotation by default
@@ -76,6 +78,7 @@ repopick 460764 # fixup! Launcher3: Implement gesture hint toggle
 repopick 460765 # fixup! Launcher3: Implement taskbar toggle
 repopick 460769 # fixup! Launcher3: Implement gesture hint toggle
 repopick 460770 # fixup! RecentsView: Unconditionally hide split option for Go-enabled targets  
+repopick 460880 # Launcher3: Fix Taskbar{Model,View}CallbacksFactory instantiation
 
 # packages/apps/Settings
 repopickchain 460693 # Settings: Switch back to udfps_enroll_enrolling_non_scroll layout
