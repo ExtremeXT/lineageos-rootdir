@@ -45,78 +45,13 @@ function rc() {
 # scripts
 repopick 460695 # device-deps-regenerator: Add lineage-23.1 branch
 
-# BP3A merges
-repopick -p -t BP3A
-
-sleep 1
-
-# system/core
-repopick 460736 # Revert "Remove libkeyutils"
-
-# vendor/lineage
-repopick 460742 # config: Add libzstd.so to artifact path requirement allowlist
-repopick -f 460881 # config: Enable background blur by default
-
 # frameworks/base
-repopickchain 460547 # Automatic translation import
-repopick 460754 # Revert "Stop domain verification delegated from UIDs blocked by network policy"
-repopick 460759 # fixup! Implement click to take partial screenshot [1/3]
-repopick 460760 # fixup! PowerManager: Add proximity check on wake
-repopick 460761 # hw key rebind hax
-repopick 460762 # fixup! SystemUI: Add heads up tile
-repopick 460763 # fixup! Configurable 0, 90, 180 and 270 degree rotation
-repopick 460768 # fixup! SystemUI: Fix constraints for keyguard slice view
-repopick 460772 # fixup! Configurable 0, 90, 180 and 270 degree rotation
-repopick 460774 # fixup! SystemUI: Make the volume dialog expandable
-repopick 460775 # fixup! SystemUIProxy: Add injectLongPress()
-repopick 460776 # fixup! SystemUIProxy: Add injectPress()
-repopick 460777 # fixup! SystemUIProxy: Add injectLongPress()
-repopick 460806 # fixup! SystemUI: Clock position customization
-repopick 460877 # KeyguardPreviewSmartspaceViewBinder: Fix NPE
-repopick 460928 # fixup! SystemUIProxy: Add injectLongPress()
-repopick 460929 # fixup! SystemUIProxy: Add injectPress()
-repopick 460956 # SystemUI: screenshot: open long screenshot activity for partial screenshots
-repopick 460957 # SystemUI: screenshot: close QS after launching long screenshot activity
-repopick 460958 # Revert "hw key rebind hax"
-repopick 460959 # fixup! fw/b: Implement hardware keys custom rebinding
+repopickchain 462453 # SystemUI: fix the tiles editor
 
 # packages/apps/Launcher3
-repopickchain 460607 # Launcher3: Add resource to enable rotation by default
-repopick 460764 # fixup! Launcher3: Implement gesture hint toggle
-repopick 460765 # fixup! Launcher3: Implement taskbar toggle
-repopick 460769 # fixup! Launcher3: Implement gesture hint toggle
-repopick 460770 # fixup! RecentsView: Unconditionally hide split option for Go-enabled targets  
-repopick 460880 # Launcher3: Fix Taskbar{Model,View}CallbacksFactory instantiation
+repopickchain 460880 # Launcher3: Fix Taskbar{Model,View}CallbacksFactory instantiation
 
 # packages/apps/Settings
-repopickchain 460693 # Settings: Switch back to udfps_enroll_enrolling_non_scroll layout
-repopick 460800 # fixup! Settings: Network setup UI changes for SUW
-repopick 460801 # ImeiInfoPreferenceController: Fix NPE
-
-# packages/modules/adb
-repopick 460778 # adbd: Fix adbd_flags_c_lib dependency
-
-# packages/apps/Aperture
-repopick 460757 # Aperture: Use colorError from appcompat
-
-# packages/apps/Recorder
-repopick 460756 # Recorder: colorAccent -> colorSecondary
-
-# packages/apps/Seedvault
-repopick 460744 # Move LocalContactsBackup to system_ext
-repopick 460758 # Seedvault: Use colorError from appcompat
-
-# hardware/samsung
-if [ -d "hardware/samsung" ]; then
-    repopick 460734 # Revert "samsung: hidl: add vibrator HAL for SEC Haptic Engine"
-fi
-
-# hardware/samsung_slsi-linaro/exynos
-if [ -d "hardware/samsung_slsi-linaro/exynos" ]; then
-    repopick 460771 # DNM kill unittests
-fi
-
-# vendor/qcom/opensource/display
-repopick 460735 # composer3: Depend on android.hardware.graphics.common-V7
+repopickchain 462603 # fixup! Settings: Network setup UI changes for SUW
 
 wait
