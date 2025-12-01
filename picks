@@ -54,4 +54,7 @@ repopickchain 460880 # Launcher3: Fix Taskbar{Model,View}CallbacksFactory instan
 # packages/apps/Settings
 repopickchain 462603 # fixup! Settings: Network setup UI changes for SUW
 
+# packages/apps/TvSettings
+repopickchain 460727 # TvSettings: Support two button mute
+
 wait
