@@ -8,7 +8,7 @@ function repopick() {
     if [[ "$CHECK" = "1" ]]; then
         echo -n "${@: -1} - " ; ssh lineage-gerrit gerrit query ${@: -1} --format=JSON | jq --slurp -r '.[0].status'
     else
-        ${ANDROID_BUILD_TOP}/vendor/lineage/build/tools/repopick.py \
+        ${ANDROID_BUILD_TOP}/lineage/scripts/repopick/repopick.py \
             -g "ssh://$GERRIT_USERNAME@review.lineageos.org:29418" $@
     fi
 }
@@ -42,19 +42,249 @@ function rc() {
 # repopick 2137 # hello
 #
 
-# scripts
-repopick 460695 # device-deps-regenerator: Add lineage-23.1 branch
+# General
+repopick --ignore-missing -t CP2A
 
-# frameworks/base
-repopickchain 462453 # SystemUI: fix the tiles editor
+# android_build
+repopickchain 491482
 
-# packages/apps/Launcher3
-repopickchain 460880 # Launcher3: Fix Taskbar{Model,View}CallbacksFactory instantiation
+# android_bionic
+repopick 490428
 
-# packages/apps/Settings
-repopickchain 462603 # fixup! Settings: Network setup UI changes for SUW
+# android_bootable_recovery
+repopickchain 490448
 
-# packages/apps/TvSettings
-repopickchain 460727 # TvSettings: Support two button mute
+# android_device_generic_goldfish
+repopickchain 490555
+
+# android_external_avb
+repopickchain 491140
+
+# android_external_dng_sdk
+repopickchain 490572
+
+# android_external_e2fsprogs
+repopickchain 490590
+
+# android_external_gptfdisk
+repopickchain 490597
+
+# android_external_libjxl
+repopick 490598
+
+# android_external_mksh
+repopickchain 490601
+
+# android_external_setupcompat
+repopickchain 490608
+
+# android_external_tinycompress
+repopickchain 490610
+
+# android_external_v4l2_codec2
+repopickchain 491128
+
+# android_external_wpa_supplicant_8
+repopick 490621
+
+# android_frameworks_av
+repopickchain 490648
+
+# android_frameworks_native
+repopickchain 492289
+
+# android_frameworks_opt_telephony
+repopickchain 490678
+
+# android_hardware_broadcom_libbt
+repopickchain 490687
+
+# android_hardware_interfaces
+repopickchain 492479
+
+# android_hardware_libhardware
+repopickchain 490712
+
+# android_hardware_nxp_nfc
+repopick 490713
+
+# android_kernel_configs
+repopickchain 492481
+
+# android_packages_apps_Contacts
+repopick 490734
+
+# android_packages_apps_DocumentsUI
+repopickchain 490738
+
+# android_packages_apps_EmergencyInfo
+repopick 490740
+
+# android_packages_apps_ThemePicker
+repopickchain 490751
+
+# android_packages_apps_TvSettings
+repopickchain 490777
+
+# android_packages_inputmethods_LatinIME
+repopick 490780
+
+# android_packages_modules_Bluetooth
+repopickchain 490791
+
+# android_packages_modules_Connectivity
+repopickchain 490802
+
+# android_packages_modules_Permission
+repopickchain 490808
+
+# android_packages_modules_Wifi
+repopick 490810
+
+# android_packages_providers_DownloadProvider
+repopickchain 490818
+
+# android_packages_providers_MediaProvider
+repopickchain 490821
+
+# android_packages_services_DeviceAsWebcam
+repopickchain 490834
+
+# android_packages_services_Telecomm
+repopickchain 491138
+
+# android_packages_services_Telephony
+repopickchain 490845
+
+# android_system_chre
+repopick 490848
+
+# android_system_fs_fs_mgr
+repopickchain 490892
+
+# android_system_media
+repopickchain 490899
+
+# android_system_netd
+repopickchain 490902
+
+# android_system_sepolicy
+repopickchain 490921
+
+# android_system_update_engine
+repopickchain 490934
+
+# android_system_vold
+repopickchain 490949
+
+# android_packages_apps_Launcher3
+repopickchain 491035
+
+# android_packages_apps_Settings
+repopickchain 491435
+
+# android_build_soong
+repopickchain 492465
+
+# android_external_zstd
+repopickchain 490623
+
+# android_system_core
+repopickchain 490876
+
+# android_external_avb
+repopickchain 491140
+
+# android_frameworks_base
+repopickchain 492467 # fw/b: Suggestion Popup: Tint properly
+
+# android_bootable_deprecated
+repopickchain 490431
+
+# android_system_security
+repopick 490903
+
+# android_external_json
+repopickchain 492661
+
+#
+# Misc
+#
+repopick -t 24-car
+repopick -t 24-atv
+repopick -t 24-restore-ion
+repopick -t 24-restore-schedtune
+repopick -t 24-restore-retrofit
+
+#
+# OEM SPECIFIC
+#
+
+#
+# Exynos
+#
+
+# android_hardware_samsung
+repopick --ignore-missing 492779
+
+# android_hardware_samsung_slsi-linaro_exynos
+repopick --ignore-missing 492917
+
+# android_device_samsung_slsi_sepolicy
+repopick --ignore-missing 491986
+
+#
+# Mainline
+#
+
+# android_hardware_baylibre_audio
+repopick --ignore-missing 491774
+
+#
+# QCOM
+#
+
+# android_hardware_qcom_wlan
+repopickchain 492846
+repopickchain 490717
+
+# android_vendor_qcom_opensource_vibrator
+repopickchain 492902
+
+# android_vendor_qcom_opensource_healthd-ext
+repopickchain 492868
+
+# android_vendor_qcom_opensource_dataservices
+repopickchain 492866
+
+# android_vendor_qcom_opensource_core-utils-vendor
+repopickchain 492860
+
+# android_vendor_qcom_opensource_wfd-commonsys
+repopickchain 490983
+
+# android_vendor_qcom_opensource_audio-hal_st-hal-ar
+repopickchain 492849
+
+# android_vendor_qcom_opensource_display-commonsys-intf
+repopickchain 492671
+
+# android_vendor_qcom_opensource_audio
+repopickchain 492674
+
+# android_vendor_qcom_opensource_audio-commonsys-intf
+repopickchain 492668
+
+# android_vendor_qcom_opensource_display-commonsys
+repopickchain 492682
+
+# android_vendor_qcom_opensource_interfaces
+repopickchain 492728
+
+# android_vendor_qcom_opensource_fm-commonsys
+repopickchain 492722
+
+# android_vendor_codeaurora_telephony
+repopickchain 492666
 
 wait
